@@ -24,7 +24,7 @@ class CreateUsersTable extends Migration
             $table->date('fecha_contrato_final');
             $table->string('email')->unique();
             $table->string('password');
-            $table->enum('Activo',['Disponible', 'Inactivo'])->default('Disponible');
+ 
             $table->rememberToken();
             $table->timestamps();
         });
