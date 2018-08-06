@@ -11,6 +11,33 @@
                     <form method="POST" action="{{ route('register') }}" aria-label="{{ __('Register') }}">
                         @csrf
 
+                         <div class="form-group row">
+                            <label for="type_document_emp" class="col-md-4 col-form-label text-md-right">{{ __('Documento') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="type_document_emp" type="select" class="{{ $errors->has('type_document_emp ') ? ' is-invalid' : '' }}" name="type_document_emp" value="{{ old('type_document_emp') }}" required autofocus>
+
+                                @if ($errors->has('type_document_emp'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('type_document_emp') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+                         <div class="form-group row">
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
+
+                                @if ($errors->has('name'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 
