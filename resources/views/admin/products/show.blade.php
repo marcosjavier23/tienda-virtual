@@ -15,7 +15,7 @@
                 </div>
 
                 <div class="panel-body">
-                  <p><strong>Categoria</strong> {{ $category_id->name }}</p>             
+                  <p><strong>Categoria</strong> {{ $category_id->category }}</p>             
                     <p><strong>Codigo</strong> {{ $product->code }}</p>
                     <p><strong>Nombre</strong> {{ $product->name }}</p>
                     <p><strong>Cantidad</strong> {{ $product->stock }}</p>

@@ -29,7 +29,7 @@ class ProductController extends Controller
  */
     public function create()
     {
-        $categories = Category::orderBy('name', 'ASC')->pluck('name', 'id');
+        $categories = Category::orderBy('category', 'ASC')->pluck('category', 'id');
       
 
         return view('admin.products.create', compact('categories'));

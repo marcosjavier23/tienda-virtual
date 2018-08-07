@@ -17,7 +17,7 @@
                 <div class="panel-body">
                     {!! Form::open(['route' => 'products.store']) !!}
 
-                        @include('user.products.partials.form')
+                        @include('admin.products.partials.form')
 
                     {!! Form::close() !!}
                 </div>
