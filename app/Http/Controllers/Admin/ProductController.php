@@ -15,7 +15,7 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    ublic function index()
+    public function index()
     {
         $products = Product::orderBy('id', 'DESC')->paginate(5);
 
