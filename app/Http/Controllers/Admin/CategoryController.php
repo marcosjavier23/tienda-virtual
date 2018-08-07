@@ -4,21 +4,22 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\CategoryProduct;
+use App\Category;
 
-class CategoryProductController extends Controller
+class CategoryController extends Controller
 {
-     /**
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index(Request $request)
-    {
+{
         $category = $request->get('category');
-        $categories = CategoryProduct::orderBy('id', 'DESC')->paginate();
 
-        return view('user.categories.index', compact('categories'));
+        $categories = Category::orderBy('id', 'DESC')->name($category)->paginate(5);
+
+        return view('admin.categories.index', compact('categories'));
     }
 
     /**
@@ -28,9 +29,9 @@ class CategoryProductController extends Controller
      */
     public function create()
     {
-        $category = CategoryProduct::orderBy('category_product', 'ASC')->pluck('category_product', 'id');
+        $category = Category::orderBy('category', 'ASC')->pluck('category', 'id');
 
-        return view('user.categories.create',compact('category'));   
+        return view('admin.categories.create',compact('category'));   
      }
 
     /**
@@ -41,7 +42,7 @@ class CategoryProductController extends Controller
      */
     public function store(Request $request)
     {
-        $category = CategoryProduct::create($request->all());
+        $category = Category::create($request->all());
         
         return redirect()->route('categories.create', $category->id)->with('info', 'Categoria creada con éxito');  
           }
@@ -54,9 +55,9 @@ class CategoryProductController extends Controller
      */
     public function show($id)
     {
-        $category = CategoryProduct::find($id);
+        $category = Category::find($id);
 
-        return view('user.categories.show', compact('category'));    }
+        return view('admin.categories.show', compact('category'));    }
 
     /**
      * Show the form for editing the specified resource.
@@ -66,9 +67,9 @@ class CategoryProductController extends Controller
      */
     public function edit($id)
     {
-        $category = CategoryProduct::find($id);
+        $category = Category::find($id);
 
-        return view('user.categories.edit', compact('category'));
+        return view('admin.categories.edit', compact('category'));
         }
 
     /**
@@ -80,11 +81,12 @@ class CategoryProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-         $category = CategoryProduct::find($id);
+         $category = Category::find($id);
 
         $category->fill($request->all())->save();
 
-        return redirect()->route('categories.edit', $category->id)->with('info', 'Categoria actualizada con éxito');    }
+        return redirect()->route('categories.edit', $category->id)->with('info', 'Categoria actualizada con éxito');    
+    }
 
     /**
      * Remove the specified resource from storage.
@@ -94,7 +96,7 @@ class CategoryProductController extends Controller
      */
     public function destroy($id)
     {
-         $category = CategoryProduct::find($id)->delete();
+         $category = Category::find($id)->delete();
 
         return back()->with('info', 'Eliminado correctamente');    }
 }

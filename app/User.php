@@ -18,6 +18,11 @@ class User extends Authenticatable
        'type_document_emp', 'nro_document_emp', 'name_emp','tlf_local_emp', 'tlf_movil_emp','fecha_contrato_ini','fecha_contrato_final', 'email', 'password',
     ];
 
+    public function category()
+    {
+        return $this->hasMany(CategoryProduct::class);
+    }
+
     /**
      * The attributes that should be hidden for arrays.
      *

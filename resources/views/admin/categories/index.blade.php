@@ -15,9 +15,7 @@
                                     Crear
                                 </a>
                             
-                                <a href="{{ route('categories.pdf') }}" target="_blank" class="btn  btn-secondary active">
-                                    Descargar Categorías en PDF
-                                </a>
+                             
                           
                         </div>
 

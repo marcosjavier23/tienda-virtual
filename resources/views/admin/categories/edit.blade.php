@@ -20,17 +20,17 @@
         <div class="col-10 col-md-offset-1">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    Crear Categoría
-                   
+                    Editar Categoría
+                    
                       <a href="{{ route('categories.index') }}" class="pull-right btn btn-sm btn-primary">
                           Inicio
                       </a>
                 </div>
 
                 <div class="panel-body">
-                    {!! Form::open(['route' => 'categories.store']) !!}
+                    {!! Form::model($category, ['route' => ['categories.update', $category->id], 'method' => 'PUT']) !!}
 
-                        @include('user.categories.partials.form')
+                        @include('admin.categories.partials.form')
 
                     {!! Form::close() !!}
                 </div>

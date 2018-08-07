@@ -4,18 +4,16 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class CategoryProduct extends Model
+class Category extends Model
 {
-    
+
     protected $fillable = [
-        'category_product','subcategory_product',
+        'category','subcate',
     ];
 
+ 
 
-    public function products()
-    {
-        return $this->hasMany(Product::class);
-    }
+  
 
     public function scopeName($query, $category)
     {
@@ -25,5 +23,4 @@ class CategoryProduct extends Model
 
     }
 
- 
 }
