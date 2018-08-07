@@ -49,13 +49,13 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'type_document_emp' => 'required',
-            'nro_document_emp' => 'required|integer',
-            'tlf_local_emp' => 'required|integer',
-            'tlf_movil_emp' =>'required',
+            'type_document_ofi' => 'required',
+            'nro_document_ofi' => 'required|integer',
+            'tlf_local_ofi' => 'required|integer',
+            'tlf_movil_ofi' =>'required',
             'fecha_contrato_ini' => 'required',
             'fecha_contrato_final' => 'required',
-            'name_emp' => 'required|string|max:255',
+            'name_ofi' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
         ]);
@@ -70,13 +70,13 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'type_document_emp' => $data['type_document_emp'],
-            'nro_document_emp' => $data['nro_document_emp'],
-            'tlf_local_emp' => $data['tlf_local_emp'],
-            'tlf_movil_emp' =>$data['tlf_movil_emp'],
+            'type_document_ofi' => $data['type_document_ofi'],
+            'nro_document_ofi' => $data['nro_document_ofi'],
+            'tlf_local_ofi' => $data['tlf_local_ofi'],
+            'tlf_movil_ofi' =>$data['tlf_movil_ofi'],
             'fecha_contrato_ini' => $data['fecha_contrato_ini'],
             'fecha_contrato_final' => $data['fecha_contrato_final'],
-            'name_emp' => $data['name_emp'],
+            'name_ofi' => $data['name_ofi'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
