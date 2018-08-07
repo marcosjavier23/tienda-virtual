@@ -45,7 +45,7 @@ class ProductController extends Controller
     {
         $product = Product::create($request->all());
 
-        return redirect()->route('products.edit', $product->id)->with('info', 'Producto creado con éxito');
+        return redirect()->route('products.index', $product->id)->with('info', 'Producto creado con éxito');
     }
 /**
  * Display the specified resource.
@@ -70,7 +70,7 @@ class ProductController extends Controller
  */
     public function edit($id)
     {
-        $categories = Category::orderBy('name', 'ASC')->pluck('name', 'id');
+        $categories = Category::orderBy('category', 'ASC')->pluck('category', 'id');
        
         $product    = Product::find($id);
 
