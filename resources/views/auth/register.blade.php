@@ -12,24 +12,24 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="type_document_emp" class="col-4 col-form-label text-right">{{ __('Documento') }}</label>
+                            <label for="type_document_ofi" class="col-4 col-form-label text-right">{{ __('Documento') }}</label>
 
                             <div >
                              
-                                {{ Form::select ('type_document_emp', array('', 'V','E','G','J'),['class'=>'multiple' ]) }}
+                                {{ Form::select ('type_document_ofi', array('', 'V','E','G','J'),['class'=>'multiple' ]) }}
                                     
-                                      @if ($errors->has('type_document_emp'))
+                                      @if ($errors->has('type_document_ofi'))
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('type_document_emp') }}</strong>
+                                        <strong>{{ $errors->first('type_document_ofi') }}</strong>
                                     </span>
                                 @endif
                                </div>
                                
-                                 <input id="nro_document_emp" type="text" class="form-control col-md-3 {{ $errors->has('nro_document_emp') ? ' is-invalid' : '' }}" name="nro_document_emp" value="{{ old('nro_document_emp') }}" required autofocus>
+                                 <input id="nro_document_ofi" type="text" class="form-control col-md-3 {{ $errors->has('nro_document_ofi') ? ' is-invalid' : '' }}" name="nro_document_ofi" value="{{ old('nro_document_ofi') }}" required autofocus>
 
-                                @if ($errors->has('nro_document_emp'))
+                                @if ($errors->has('nro_document_ofi'))
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('nro_document_emp') }}</strong>
+                                        <strong>{{ $errors->first('nro_document_ofi') }}</strong>
                                     </span>
                                 @endif
                            
@@ -39,42 +39,42 @@
 
 
                         <div class="form-group row">
-                            <label for="name_emp" class="col-md-4 col-form-label text-md-right">{{ __('Nombre') }}</label>
+                            <label for="name_ofi" class="col-md-4 col-form-label text-md-right">{{ __('Nombre') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name_emp" type="text" class="form-control{{ $errors->has('name_emp') ? ' is-invalid' : '' }}" name="name_emp" value="{{ old('name_emp') }}" required autofocus>
+                                <input id="name_ofi" type="text" class="form-control{{ $errors->has('name_ofi') ? ' is-invalid' : '' }}" name="name_ofi" value="{{ old('name_ofi') }}" required autofocus>
 
-                                @if ($errors->has('name_emp'))
+                                @if ($errors->has('name_ofi'))
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('name_emp') }}</strong>
+                                        <strong>{{ $errors->first('name_ofi') }}</strong>
                                     </span>
                                 @endif
                             </div>
                         </div>
 
                            <div class="form-group row">
-                            <label for="tlf_local_emp" class="col-md-4 col-form-label text-md-right">{{ __('Telefono Local') }}</label>
+                            <label for="tlf_local_ofi" class="col-md-4 col-form-label text-md-right">{{ __('Telefono Local') }}</label>
 
                             <div class="col-md-6">
-                                <input id="tlf_local_emp" type="text" class="form-control{{ $errors->has('tlf_local_emp') ? ' is-invalid' : '' }}" name="tlf_local_emp" value="{{ old('tlf_local_emp') }}" required>
+                                <input id="tlf_local_ofi" type="text" class="form-control{{ $errors->has('tlf_local_ofi') ? ' is-invalid' : '' }}" name="tlf_local_ofi" value="{{ old('tlf_local_ofi') }}" required>
 
-                                @if ($errors->has('tlf_local_emp'))
+                                @if ($errors->has('tlf_local_ofi'))
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('tlf_local_emp') }}</strong>
+                                        <strong>{{ $errors->first('tlf_local_ofi') }}</strong>
                                     </span>
                                 @endif
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="tlf_movil_emp" class="col-md-4 col-form-label text-md-right">{{ __('Telefono Movil') }}</label>
+                            <label for="tlf_movil_ofi" class="col-md-4 col-form-label text-md-right">{{ __('Telefono Movil') }}</label>
 
                             <div class="col-md-6">
-                                <input id="tlf_movil_emp" type="text" class="form-control{{ $errors->has('tlf_movil_emp') ? ' is-invalid' : '' }}" name="tlf_movil_emp" value="{{ old('tlf_movil_emp') }}" required>
+                                <input id="tlf_movil_ofi" type="text" class="form-control{{ $errors->has('tlf_movil_ofi') ? ' is-invalid' : '' }}" name="tlf_movil_ofi" value="{{ old('tlf_movil_ofi') }}" required>
 
-                                @if ($errors->has('tlf_movil_emp'))
+                                @if ($errors->has('tlf_movil_ofi'))
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('tlf_movil_emp') }}</strong>
+                                        <strong>{{ $errors->first('tlf_movil_ofi') }}</strong>
                                     </span>
                                 @endif
                             </div>
@@ -87,9 +87,9 @@
                             <div class="col-md-6">
                                    {{ Form::date('fecha_contrato_ini', null, ['class' => 'form-control', 'id' => 'datepicker']) }}
 
-                                @if ($errors->has('tlf_movil_emp'))
+                                @if ($errors->has('tlf_movil_ofi'))
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('tlf_movil_emp') }}</strong>
+                                        <strong>{{ $errors->first('tlf_movil_ofi') }}</strong>
                                     </span>
                                 @endif
                             </div>
