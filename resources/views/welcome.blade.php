@@ -76,8 +76,12 @@
                     @endauth
                 </div>
             @endif
+            
+            <div>
+                <img class="" src="img/rawpixel-191157-unsplash.jpg" width="100%" alt="">
+            </div>
 
-            <div class="content">
+            {{-- <div class="content">
                 <div class="title m-b-md">
                     Laravel
                 </div>
@@ -89,7 +93,7 @@
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </body>
 </html>
