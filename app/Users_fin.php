@@ -2,10 +2,9 @@
 
 namespace App;
 
-use Illuminate\Notifications\Notifiable;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Model;
 
-class User extends Authenticatable
+class Users_fin extends Model
 {
     use Notifiable;
 
@@ -15,7 +14,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-       'type_document_ofi', 'nro_document_ofi', 'name_ofi','tlf_local_ofi', 'tlf_movil_ofi','fecha_contrato_ini','fecha_contrato_final', 'email', 'password',
+       'type_document_fin', 'nro_document_fin', 'name_fin','tlf_local_fin', 'tlf_movil_fin','fecha_contrato_ini','fecha_contrato_final', 'email', 'password',
     ];
 
     public function category()
@@ -35,4 +34,6 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+}
+
 }
