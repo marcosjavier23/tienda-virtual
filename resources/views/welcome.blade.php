@@ -8,8 +8,10 @@
         <title>Salva Foods</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <!-- Styles -->
         <style>
             html, body {
@@ -71,7 +73,7 @@
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        <a href="{{ route('login') }}"><h2>Login</h2></a>
                         <a href="{{ route('register') }}">Register</a>
                     @endauth
                 </div>
@@ -95,5 +97,53 @@
                 </div>
             </div> --}}
         </div>
+        <br><br><br><br><br><br>
+        <div class="container">
+                <div class="card-deck">
+
+                        <div class="card shadow-lg p-3 mb-5 bg-white rounded">
+                                <header class="container">
+                                        <h3>Zapatos</h3>
+                                      </header>
+                            <img class="card-img-top" src="img/greg.jpg" alt="Card image cap">
+                          <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                          </div>
+                          <div class="card-footer">
+                                <button class="w3-button w3-block w3-dark-grey">+ Connect</button>
+                          </div>
+                        </div>
+
+                        <div class="card shadow-lg p-3 mb-5 bg-white rounded">
+                                <header class="container">
+                                        <h3>Zapatos</h3>
+                                      </header>
+                            <img class="card-img-top" src="img/xavier.jpg" alt="Card image cap">
+                          <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                          </div>
+                          <div class="card-footer">
+                                <button class="w3-button w3-block w3-dark-grey">+ Connect</button>
+                          </div>
+                        </div>
+
+                        <div class="card shadow-lg p-3 mb-5 bg-white rounded">
+                                <header class="container">
+                                        <h3>Zapatos Casuales</h3>
+                                      </header>
+                            <img class="card-img-top" src="img/alexandra.jpg" alt="Card image cap">
+                          <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                          </div>
+                          <div class="card-footer">
+                                <button class="w3-button w3-block w3-dark-grey">+ Connect</button>
+                          </div>
+                        </div>
+                      </div>
+        </div>        
+        <br><br><br><br>
     </body>
 </html>

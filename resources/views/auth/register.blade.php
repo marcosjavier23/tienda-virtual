@@ -1,5 +1,12 @@
 @extends('layouts.app')
-
+<style>
+        html, body , nav{
+        background:url("img/rawpixel-685925-unsplash.jpg");
+        background-position: relative;
+        background-size:  100%;
+        background-repeat: no-repeat;
+        }
+    </style>
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
