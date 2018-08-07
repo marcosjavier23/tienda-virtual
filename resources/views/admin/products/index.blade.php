@@ -22,11 +22,11 @@
                         <thead>
                             <tr>
                                 <th> Categoria </th>
-                                <th> Detalle </th>
+                           
                                 <th> Codigo</th>
                                 <th> Nombre</th>
                                 <th> Cantidad</th>
-                                <th> Impuesto </th>
+                                <th> Precio </th>
 
                                 <th colspan="3">&nbsp;</th>
                             </tr>
@@ -38,8 +38,8 @@
                               
                                 <td>{{ $product->code }}       </td>
                                 <td>{{ $product->name }}       </td>
-                                <td>{{ $product->amount }}     </td>
-                                <td>{{ $product->tax }}        </td>
+                                <td>{{ $product->stock }}     </td>
+                                <td>{{ $product->precio }}        </td>
                             
                                   <td width="10px">
                                       <a href="{{ route('products.show', $product->id) }}" class="btn btn-sm btn-default">Ver</a>

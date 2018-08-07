@@ -19,8 +19,8 @@
                
                     <p><strong>Codigo</strong> {{ $product->code }}</p>
                     <p><strong>Nombre</strong> {{ $product->name }}</p>
-                    <p><strong>Cantidad</strong> {{ $product->amount }}</p>
-                    <p><strong>Impuesto</strong> {{ $product->tax }}</p>
+                    <p><strong>Cantidad</strong> {{ $product->stock }}</p>
+                    <p><strong>Impuesto</strong> {{ $product->precio }}</p>
 
 
                 </div>
