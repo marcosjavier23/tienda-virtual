@@ -36,4 +36,4 @@ class Users_fin extends Model
     ];
 }
 
-}
+

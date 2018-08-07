@@ -18,10 +18,10 @@ class CreateUsersFinTable extends Migration
             $table->enum('type_document_fin',['V','E','G','J']);
             $table->integer('nro_document_fin');
             $table->string('name_fin');
-            $table->string('tlf_local_fin');
-            $table->string('tlf_movil_fin');
-            $table->date('fecha_contrato_ini');
-            $table->date('fecha_contrato_final');
+            $table->string('last_fin')->nullable();
+            $table->string('tlf_local_fin')->nullable();
+            $table->string('tlf_movil_fin')->nullable();
+    
             $table->string('email')->unique();
             $table->timestamps();
         });
