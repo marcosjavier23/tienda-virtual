@@ -14,7 +14,7 @@
 
 <div class="form-group col-6">
   {{ Form::label('category', 'Nombre de la categoría *') }}
-  {{ Form::select('category', array('Pintura Domestica'=>'Pintura Domestica','Pintura Industrial' => 'Pintura Industrial', 'Pegamento' => 'Pegamento','Herramientas'=>'Herramientas', 'Materiales'=>'Materiales'), ['class'=>'multiple' ]) }}
+  {{ Form::select('category', array('Hogar'=>'Hogar','Tecnología' => 'Tecnología', 'Moda' => 'Moda','Libros'=>'Libros', 'Deporte'=>'Deporte'), ['class'=>'multiple' ]) }}
 </div>
 
 <div class="form-group col-6">
