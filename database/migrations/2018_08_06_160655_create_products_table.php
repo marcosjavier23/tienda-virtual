@@ -18,7 +18,7 @@ class CreateProductsTable extends Migration
             $table->string('code');
             $table->string('name');
             $table->integer('stock');
-            $table->decimal('precio');
+            $table->double('precio');
             $table->integer('user_id')->unsigned();
             $table->integer('category_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
