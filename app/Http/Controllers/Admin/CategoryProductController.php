@@ -15,7 +15,8 @@ class CategoryProductController extends Controller
      */
     public function index(Request $request)
     {
-        $categories = Category::orderBy('id', 'DESC')->paginate(5);
+        $category = $request->get('category');
+        $categories = CategoryProduct::orderBy('id', 'DESC')->paginate();
 
         return view('user.categories.index', compact('categories'));
     }
@@ -27,7 +28,7 @@ class CategoryProductController extends Controller
      */
     public function create()
     {
-        $category = Category::orderBy('category_product', 'ASC')->pluck('category_product', 'id');
+        $category = CategoryProduct::orderBy('category_product', 'ASC')->pluck('category_product', 'id');
 
         return view('user.categories.create',compact('category'));   
      }
@@ -40,7 +41,7 @@ class CategoryProductController extends Controller
      */
     public function store(Request $request)
     {
-        $category = Category::create($request->all());
+        $category = CategoryProduct::create($request->all());
         
         return redirect()->route('categories.create', $category->id)->with('info', 'Categoria creada con éxito');  
           }
@@ -53,7 +54,7 @@ class CategoryProductController extends Controller
      */
     public function show($id)
     {
-        $category = Category::find($id);
+        $category = CategoryProduct::find($id);
 
         return view('user.categories.show', compact('category'));    }
 
@@ -65,7 +66,7 @@ class CategoryProductController extends Controller
      */
     public function edit($id)
     {
-        $category = Category::find($id);
+        $category = CategoryProduct::find($id);
 
         return view('user.categories.edit', compact('category'));
         }
@@ -79,7 +80,7 @@ class CategoryProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-         $category = Category::find($id);
+         $category = CategoryProduct::find($id);
 
         $category->fill($request->all())->save();
 
@@ -93,7 +94,7 @@ class CategoryProductController extends Controller
      */
     public function destroy($id)
     {
-         $category = Category::find($id)->delete();
+         $category = CategoryProduct::find($id)->delete();
 
         return back()->with('info', 'Eliminado correctamente');    }
 }

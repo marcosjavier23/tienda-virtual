@@ -17,5 +17,13 @@ class CategoryProduct extends Model
         return $this->hasMany(Product::class);
     }
 
+    public function scopeName($query, $category)
+    {
+        if ($category) {
+            return $query->where('category', 'LIKE', "%$category%");
+        }
+
+    }
+
  
 }
